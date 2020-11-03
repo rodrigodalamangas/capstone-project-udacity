@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h4 class="text-center">Recommendation Parameters</h4>
+    <p class="text-center"><i>{{gender}}</i></p>
+    <p class="text-center"><i>{{age}}</i></p>
+    <p class="text-center"><i>{{income}}</i></p>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Best offers for this customer</h1>
+        <ul class="list-group">
+            {% for offer in offer_list %}
+                <li class="list-group-item list-group-item-success text-center">{{offer}}</li>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
